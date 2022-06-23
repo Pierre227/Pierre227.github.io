@@ -1,1 +1,71 @@
-Hello World!
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+</style>
+</head>
+<body>
+
+<p id="index"></p>
+
+<div class="slidecontainer">
+  <input type="range" min="-2" max="2" value="0" step="0.1" class="slider" id="myRange">
+</div>
+<script>
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("index");
+output.innerHTML = slider.value; // Display the default slider value
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+
+  var el = document.getElementById('ok');
+  el.parentNode.removeChild(el);
+  var el = document.getElementById('ok');
+  el.parentNode.removeChild(el);
+  var el = document.getElementById('ok');
+  el.parentNode.removeChild(el);
+  var el = document.getElementById('ok');
+  el.parentNode.removeChild(el);
+  var el = document.getElementById('ok');
+  el.parentNode.removeChild(el);
+  var el = document.getElementById('ok');
+  el.parentNode.removeChild(el);
+
+  output.innerHTML = this.value;
+  var alpha=output.innerHTML.replace('.',',')
+
+  var add=`img/0000:${alpha}.png`;
+  display_image(add, 500, 500, 'JavaScriptImage');
+  add=`img/0010:${alpha}.png`;
+  display_image(add, 500, 500, 'JavaScriptImage');
+  add=`img/0110:${alpha}.png`;
+  display_image(add, 500, 500, 'JavaScriptImage');
+  add=`img/1000:${alpha}.png`;
+  display_image(add, 500, 500, 'JavaScriptImage');
+  add=`img/1010:${alpha}.png`;
+  display_image(add, 500, 500, 'JavaScriptImage');
+  add=`img/1110:${alpha}.png`;
+  display_image(add, 500, 500, 'JavaScriptImage');
+} 
+function display_image(src, width, height, alt) {
+    var a = document.createElement("img");
+    a.id='ok';
+    a.src = src;
+    a.width = width;
+    a.height = height;
+    a.alt = alt;
+    document.body.appendChild(a);
+}
+display_image('img/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/foo.png', 500, 500, 'JavaScriptImage');
+</script>
+</body>
+</html>
