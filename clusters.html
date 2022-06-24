@@ -9,22 +9,22 @@
 </head>
 <body>
   <div id = "header">
-    <h1>Circles</h1>
+    <h1>Clusters</h1>
     <ul>
        <li><a href="circles.html">Circles</a> 
        <li><a href="clusters.html">Clusters</a> 
        <li><a href="#">Page</a>
     </ul> 
   </div>
-<p id="circles"></p>
+<p id="clusters"></p>
 
 <div class="slidecontainer">
-  <input type="range" min="-2" max="2" value="0" step="0.1" class="slider" id="myRange">
+  <input type="range" min="-2" max="2" value="0" step="0.5" class="slider" id="myRange">
 </div>
 <script>
 
 var slider = document.getElementById("myRange");
-var output = document.getElementById("circles");
+var output = document.getElementById("clusters");
 output.innerHTML = slider.value; // Display the default slider value
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
@@ -45,34 +45,34 @@ slider.oninput = function() {
   output.innerHTML = this.value;
   var alpha=output.innerHTML.replace('.',',')
 
-  var add=`img/circles/0000:${alpha}.png`;
+  var add=`img/clusters/0000:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/circles/0010:${alpha}.png`;
+  add=`img/clusters/0010:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/circles/0110:${alpha}.png`;
+  add=`img/clusters/0110:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/circles/1000:${alpha}.png`;
+  add=`img/clusters/1000:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/circles/1010:${alpha}.png`;
+  add=`img/clusters/1010:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/circles/1110:${alpha}.png`;
+  add=`img/clusters/1110:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
 } 
 function display_image(src, width, height, alt) {
     var a = document.createElement("img");
     a.id='ok';
     a.src = src;
-    a.width = width;
-    a.height = height;
+    //a.width = width;
+    //a.height = height;
     a.alt = alt;
     document.body.appendChild(a);
 }
-display_image('img/circles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/circles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/circles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/circles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/circles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/circles/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/clusters/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/clusters/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/clusters/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/clusters/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/clusters/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/clusters/foo.png', 500, 500, 'JavaScriptImage');
 </script>
 </body>
 </html>
