@@ -14,12 +14,13 @@
        <li><a href="circles.html">Circles</a> 
        <li><a href="clusters.html">Clusters</a> 
        <li><a href="moons.html">Moons</a>
+       <li><a href="quantiles.html">Quantiles</a>
     </ul> 
   </div>
 <p id="clusters"></p>
 
 <div class="slidecontainer">
-  <input type="range" min="-2" max="2" value="0" step="0.1" class="slider" id="myRange">
+  <input type="range" min="-1" max="2" value="0" step="0.1" class="slider" id="myRange">
 </div>
 <script>
 
@@ -46,17 +47,17 @@ slider.oninput = function() {
   var alpha=output.innerHTML.replace('.',',')
 
   var add=`img/clusters/0000:${alpha}.png`;
-  display_image(add, 500, 500, 'JavaScriptImage');
+  display_image(add, 500, 500, 'à calculer ');
   add=`img/clusters/0010:${alpha}.png`;
-  display_image(add, 500, 500, 'JavaScriptImage');
+  display_image(add, 500, 500, '');
   add=`img/clusters/0110:${alpha}.png`;
-  display_image(add, 500, 500, 'JavaScriptImage');
+  display_image(add, 500, 500, '');
   add=`img/clusters/1000:${alpha}.png`;
-  display_image(add, 500, 500, 'JavaScriptImage');
+  display_image(add, 500, 500, '');
   add=`img/clusters/1010:${alpha}.png`;
-  display_image(add, 500, 500, 'JavaScriptImage');
+  display_image(add, 500, 500, '');
   add=`img/clusters/1110:${alpha}.png`;
-  display_image(add, 500, 500, 'JavaScriptImage');
+  display_image(add, 500, 500, '');
 } 
 function display_image(src, width, height, alt) {
     var a = document.createElement("img");
