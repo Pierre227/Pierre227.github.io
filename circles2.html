@@ -9,24 +9,24 @@
 </head>
 <body>
   <div id = "header">
-    <h1>Quantiles</h1>
+    <h1>Circles 2</h1>
     <ul>
-        <li><a href="circles.html">Circles</a> 
-        <li><a href="clusters.html">Clusters</a> 
-        <li><a href="moons.html">Moons</a>
-        <li><a href="quantiles.html">Quantiles</a>
-        <li><a href="circles2.html">Circles 2</a>
+       <li><a href="circles.html">Circles</a> 
+       <li><a href="clusters.html">Clusters</a> 
+       <li><a href="moons.html">Moons</a>
+       <li><a href="quantiles.html">Quantiles</a>
+       <li><a href="circles2.html">Circles 2</a>
     </ul> 
   </div>
-<p id="quantiles"></p>
+<p id="circles2"></p>
 
 <div class="slidecontainer">
-  <input type="range" min="-1" max="2" value="0" step="0.1" class="slider" id="myRange">
+  <input type="range" min="-1" max="2" value="0" step="0.5" class="slider" id="myRange">
 </div>
 <script>
 
 var slider = document.getElementById("myRange");
-var output = document.getElementById("quantiles");
+var output = document.getElementById("circles2");
 output.innerHTML = slider.value; // Display the default slider value
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
@@ -47,34 +47,34 @@ slider.oninput = function() {
   output.innerHTML = this.value;
   var alpha=output.innerHTML.replace('.',',')
 
-  var add=`img/quantiles/0000:${alpha}.png`;
+  var add=`img/circles2/0000:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/quantiles/0010:${alpha}.png`;
+  add=`img/circles2/0010:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/quantiles/0110:${alpha}.png`;
+  add=`img/circles2/0110:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/quantiles/1000:${alpha}.png`;
+  add=`img/circles2/1000:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/quantiles/1010:${alpha}.png`;
+  add=`img/circles2/1010:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
-  add=`img/quantiles/1110:${alpha}.png`;
+  add=`img/circles2/1110:${alpha}.png`;
   display_image(add, 500, 500, 'JavaScriptImage');
 } 
 function display_image(src, width, height, alt) {
     var a = document.createElement("img");
     a.id='ok';
     a.src = src;
-    //a.width = width;
-    //a.height = height;
+    a.width = width;
+    a.height = height;
     a.alt = alt;
     document.body.appendChild(a);
 }
-display_image('img/quantiles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/quantiles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/quantiles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/quantiles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/quantiles/foo.png', 500, 500, 'JavaScriptImage');
-display_image('img/quantiles/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/circles2/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/circles2/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/circles2/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/circles2/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/circles2/foo.png', 500, 500, 'JavaScriptImage');
+display_image('img/circles2/foo.png', 500, 500, 'JavaScriptImage');
 </script>
 </body>
 </html>
